@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fnet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQueries.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="managment">
+            <button class="sidebarClose" id="sidebarCloseButton">X</button>
+            <div class="userManagment">
+                <div>
+                    <img class="userImage" src="./image/ph_users-bold.png" alt="ph_users-bold">
+                    <img class="userImageWhite" src="./image/ph_users-bold2.png" alt="ph_users-bold">
+                </div>
+                <div class="userManagmentP">
+                    <p>User Management</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="content">
+            <!-- Top menu -->
+            <div class="menu">
+                <!-- Burger Menu (visible on smaller screens) -->
+                <div id="hamburgerMenu" class="burger-menu">
+                    <img src="./image/menu.png" alt="Burger Menu">
+                </div>
+                <div class="menu-items">
+                    <div class="search">
+                        <input type="text" placeholder="Search...">
+                        <div class="search-icon">
+                            <span class="separator"></span>
+                            <img src="./image/Search.png" alt="Search Icon">
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <img src="./image/notification.png" alt="Notification Icon">
+                    </div>
+                    <div class="profile">
+                        <img src="./image/profile.jpeg" alt="Profile Image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Placeholder for page content -->
+            <div class="page-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal for user details -->
+    <div id="actionModal" class="modalDetails hidden">
+        <div class="modal-content">
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+
+    <!-- Modal for Editing User Info -->
+    <div id="userEditModal" class="modal-container hidden">
+        <div class="modal-box">
+            <div class="headerPart">
+                <h2>Edit User</h2>
+                <img src="./image/cancel_close.png" id="modalCloseImage" alt="Close Modal" />
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" />
+                </div>
+                <div class="input-group">
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" name="surname" />
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" />
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" />
+            </div>
+            <div class="modal-actions">
+                <button id="closeButton" class="close-btn">Close</button>
+                <button id="saveButton">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteConfirmationModal" class="deleteModal hidden">
+        <h2>Delete User</h2>
+        <p id="deleteMessage"></p>
+        <div class="buttonsControler">
+            <button id="cancelDeleteButton" class="button cancel-button">Cancel</button>
+            <button id="confirmDeleteButton" class="button delete-button">Delete</button>
+        </div>
+    </div>
+
+    <!-- Delete Success Modal -->
+    <div id="deleteSuccessModal" class="successModal hidden">
+        <img src="./image/Group 4.png" alt="successfully-image">
+        <p>User deleted successfully.</p>
+        <button id="closeSuccessButton" class="button success-button">Ok, thanks</button>
+    </div>
+
+    <!-- Overlay -->
+    <div id="modalOverlay" class="overlay hidden"></div>
+
+
+
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

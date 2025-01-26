@@ -1,0 +1,264 @@
+@media (min-width: 1024px) {
+    .user-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .managment {
+        width: 260px;
+        position: fixed;
+    }
+
+    .content {
+        margin-left: 260px;
+        width: calc(100% - 260px);
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 600px) {
+    .user-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .managment {
+        width: 240px;
+    }
+
+    .content {
+        margin-left: 240px;
+        width: calc(100% - 240px);
+    }
+
+    .userManagment {
+        width: 220px;
+        background-color: #1D3557;
+    }
+
+    .userImageWhite {
+        background-image: url('./image/ph_users-bold2.png');
+        margin-left: 15px;
+    }
+
+    .userImage {
+        display: none;
+    }
+
+    .userManagmentP p {
+        color: white;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebarClose {
+        display: flex;
+    }
+
+    .managment {
+        display: block;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .managment.closed {
+        display: none;
+    }
+
+    .burger-menu.show {
+        display: block;
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        cursor: pointer;
+        z-index: 1001;
+    }
+}
+
+@media (max-width: 599px) {
+    .user-list {
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .managment {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .left-side-line {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .modalDetails {
+        width: 358px;
+        height: 350px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .menu {
+        height: 50px;
+        padding: 0 10px;
+    }
+
+    .menu-items {
+        gap: 10px;
+    }
+
+    .notification img,
+    .profile img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .user-item {
+        width: 100%;
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .modal-content {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .user-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .managment {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 240px;
+        height: 100%;
+        background-color: #1D3557;
+        z-index: 1000;
+        padding: 1rem;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .managment.show {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .burger-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .modalDetails {
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .menu {
+        height: 50px;
+        padding: 0 10px;
+    }
+
+    .menu-items {
+        gap: 10px;
+    }
+
+    .user-item {
+        width: 100%;
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .sidebarClose {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        left: 12rem;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .search {
+        width: 28px;
+        height: 26px;
+        position: relative;
+    }
+
+    .search input {
+        display: none;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .search img {
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+    }
+
+    .userManagment {
+        width: 220px;
+        background-color: #1D3557;
+        margin-top: 50px;
+    }
+
+    .userImageWhite {
+        background-image: url('./image/ph_users-bold2.png');
+    }
+
+    .userImage {
+        display: none;
+    }
+
+    .userManagmentP p {
+        color: white;
+    }
+
+    .managment.closed {
+        display: none;
+    }
+
+    .hamburgerMenu.show {
+        display: block;
+    }
+
+    .hamburgerMenu.closed {
+        display: none;
+    }
+}
